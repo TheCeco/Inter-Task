@@ -1,7 +1,7 @@
 const progressEl = document.getElementById('progress')
 progressEl.style.background = '#f1f1f1'
 const html = document.querySelector('html')
-const links = document.querySelectorAll('nav a');
+// const links = document.querySelectorAll('nav a');
 
 
 function scrollHandler() {

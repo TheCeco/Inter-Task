@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik";
+  --nav-before: 0%;
+  --nav-before-bgc: #a81cfe;
+  --nav-bgc: #f1f1f1;
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+section {
+  scroll-snap-align: start;
+  padding-top: 150px;
+}
+
+#home {
+  background-color: #a81cfe;
+}
+
+#cards {
+  background-color: antiquewhite;
+}
+
+#bio {
+  background-color: aquamarine;
+}
+
+#gallery {
+  background-color: blanchedalmond;
+}

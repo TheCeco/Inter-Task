@@ -1,20 +1,10 @@
-body {
-  margin: 0;
-  padding: 0;
-  overflow: auto;
-  font-family: "Rubik";
-  --nav-before: 0%;
-  --nav-before-bgc: #a81cfe;
-  --nav-bgc: #f1f1f1;
-}
-
 nav {
   top: 0;
   left: 0;
   margin: 0;
   position: fixed;
   width: 100%;
-  height: 9%;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
