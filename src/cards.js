@@ -1,4 +1,4 @@
-const cards = document.getElementById("cards");
+const cards = document.querySelector("#cards .wrapper");
 const cardsNum = 5;
 
 function createCardsContext() {

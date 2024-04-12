@@ -8,13 +8,13 @@ import { createCardsContext } from "./cards.js";
 const sections = document.querySelectorAll("section");
 
 sections.forEach((section) => {
-  section.style.height = `${window.innerHeight - 100}px`;
+  section.style.height = `${window.innerHeight}px`;
   section.style.width = `${window.innerWidth}px`;
 });
 
-const container = document.getElementsByClassName('container')[0];
+const main = document.querySelector('main');
 
-container.style.height = `${window.innerHeight}px`;
+main.style.height = `${window.innerHeight}px`;
 
 
 createCardsContext();

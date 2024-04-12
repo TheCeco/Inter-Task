@@ -4,7 +4,7 @@ nav {
   margin: 0;
   position: fixed;
   width: 100%;
-  height: 100px;
+  height: 9.26%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@ nav::before {
   content: "";
   color: #ffffff;
   width: var(--nav-before);
-  height: 9%;
+  height: 9.26%;
   background-color: var(--nav-before-bgc);
   position: fixed;
   left: 0;

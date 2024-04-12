@@ -7,14 +7,20 @@ body {
   --nav-bgc: #f1f1f1;
 }
 
-.container {
+main {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
 
 section {
   scroll-snap-align: start;
-  padding-top: 150px;
+}
+
+.wrapper {
+    padding-top: 13.89%;
+    padding-left: 4.17%;
+    padding-right: 4.17%;
+    padding-bottom: 4.63%;
 }
 
 #home {
