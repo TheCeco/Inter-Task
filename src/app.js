@@ -9,7 +9,7 @@ const sections = document.querySelectorAll("section");
 
 sections.forEach((section) => {
   section.style.height = `${window.innerHeight}px`;
-  section.style.width = `${window.innerWidth}px`;
+  section.style.width = `100%`;
 });
 
 const main = document.querySelector('main');

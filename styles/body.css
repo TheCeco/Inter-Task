@@ -1,10 +1,23 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
+}
+
+body {
   --nav-before: 0%;
   --nav-before-bgc: #a81cfe;
   --nav-bgc: #f1f1f1;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+h3, {
+  font-size: 24px;
+  font-weight: 400;
 }
 
 main {
@@ -17,14 +30,18 @@ section {
 }
 
 .wrapper {
-    padding-top: 13.89%;
-    padding-left: 4.17%;
-    padding-right: 4.17%;
-    padding-bottom: 4.63%;
+  padding-top: 150px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 50px;
+}
+
+#description {
+    color: #888888;
 }
 
 #home {
-  background-color: #a81cfe;
+  background-color: #333333;
 }
 
 #cards {

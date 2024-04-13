@@ -1,11 +1,34 @@
+#home .wrapper {
+  flex-basis: 528px;
+  display: flex;
+  flex-direction: row;
+}
+
+.headline,
+.information {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: start;
+  justify-content: start;
+}
+
 .info-wrap {
+  position: relative;
   background: white;
   padding: 50px 30px 50px 30px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-row-gap: 30px;
   border-radius: 0px 40px 40px 0px;
-  width: 27.5%;
-  height: 81.48%;
+  width: 528px;
+  margin-right: 40px;
+}
+
+.forms {
+  width: 100%;
+  height: 880px;
+  background-color: whitesmoke;
 }
 
 .buttons {
