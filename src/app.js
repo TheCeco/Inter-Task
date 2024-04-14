@@ -8,8 +8,7 @@ import { createCardsContext } from "./cards.js";
 const sections = document.querySelectorAll("section");
 
 sections.forEach((section) => {
-  section.style.height = `${window.innerHeight}px`;
-  section.style.width = `100%`;
+  section.style.height = `${window.innerHeight - 200}px`;
 });
 
 const main = document.querySelector('main');

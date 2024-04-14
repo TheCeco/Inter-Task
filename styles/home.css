@@ -1,13 +1,12 @@
-#home .wrapper {
-  flex-basis: 528px;
+#home {
   display: flex;
-  flex-direction: row;
+  flex-wrap: column wrap;
 }
 
 .headline,
 .information {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   row-gap: 10px;
   align-items: start;
   justify-content: start;
@@ -18,21 +17,59 @@
   background: white;
   padding: 50px 30px 50px 30px;
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   grid-row-gap: 30px;
   border-radius: 0px 40px 40px 0px;
-  width: 528px;
   margin-right: 40px;
+  flex-shrink: 5;
+  order: 1;
+  justify-content: flex-end;
+}
+
+.forms-border-wrap {
+  --border-radius: 40px;
+  width: 70%;
+  background: linear-gradient(135deg, #a91cff, #1043ff);
+  flex-shrink: 0.5;
+  order: 2;
+  border-radius: var(--border-radius) var(--border-radius) 0px
+    var(--border-radius);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .forms {
+  --border-width: 13px;
+  background: #333333;
   width: 100%;
-  height: 880px;
-  background-color: whitesmoke;
+  margin: var(--border-width);
+  border-radius: calc(var(--border-radius) - var(--border-width))
+    calc(var(--border-radius) - var(--border-width)) 0px
+    calc(var(--border-radius) - var(--border-width));
 }
 
 .buttons {
-  display: grid;
-  grid-auto-flow: column;
-  grid-column-gap: 10px;
+  display: flex;
+}
+
+.elipse {
+  border-radius: 50%;
+  position: relative;
+}
+
+.elipse.blue.small {
+  width: 40.55px;
+  height: 40.55px;
+  background-color: #1043FF;
+  top: 4.92%;
+  left: 46.41%;
+}
+
+.elipse.small.white {
+  width: 86.31px;
+  height: 86.31px;
+  background-color: #f1f1f1;
+  left: 32.6%;
+  top: 30.56%
 }
