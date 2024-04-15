@@ -1,0 +1,7 @@
+#footer {
+    height: 449px;
+    width: 100%;
+    background: #333333;
+    position: relative;
+    scroll-snap-align: end;
+}

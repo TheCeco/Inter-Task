@@ -1,6 +1,7 @@
 #home {
   display: flex;
   flex-wrap: column wrap;
+  background-color: #333333;
 }
 
 .headline,
@@ -10,6 +11,10 @@
   row-gap: 10px;
   align-items: start;
   justify-content: start;
+}
+
+.information p {
+  width: 468px;
 }
 
 .info-wrap {
@@ -62,8 +67,8 @@
   width: 40.55px;
   height: 40.55px;
   background-color: #1043FF;
-  top: 4.92%;
-  left: 46.41%;
+  top: 4%;
+  left: 47%;
 }
 
 .elipse.small.white {
@@ -71,5 +76,27 @@
   height: 86.31px;
   background-color: #f1f1f1;
   left: 32.6%;
-  top: 30.56%
+  top: 25%
 }
+
+.elipse.big.purple {
+  height: 317.77px;
+  width: 317.77px;
+  background: #a81cff;
+  left: 43.47%;
+  top: 12.5%;
+  transform: translate(-1px, -130px);
+  z-index: 2;
+}
+
+.square.big.white {
+  width: 309.13px;
+  height: 309.13px;
+  background: #f1f1f1;
+  rotate: -18.54deg;
+  top: -8%;
+  left: 28%;
+  position: relative;
+  z-index: 1;
+}
+

@@ -8,22 +8,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--nav-bgc);
-  z-index: 1;
-}
-
-nav::before {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  content: "";
-  color: #ffffff;
-  width: var(--nav-before);
-  height: 100px;
-  background-color: var(--nav-before-bgc);
-  position: fixed;
-  left: 0;
-  top: 0;
+  background: linear-gradient(90deg, rgba(168, 28, 254, 1) 0%, rgba(241, 241, 241, 1) 0%);
+  z-index: 100;
 }
 
 nav a {
@@ -31,7 +17,6 @@ nav a {
   color: #333333;
   font-size: 22px;
   font-weight: 600;
-  z-index: 100;
 }
 
 nav a:first-child {

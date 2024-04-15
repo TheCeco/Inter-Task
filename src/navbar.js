@@ -1,29 +1,65 @@
-const progressEl = document.getElementById('progress')
-progressEl.style.background = '#f1f1f1'
-const html = document.querySelector('html')
-// const links = document.querySelectorAll('nav a');
-
+const html = document.querySelector("html");
+const sections = document.querySelectorAll("section");
+const nav = document.querySelector("nav");
+const links = document.querySelectorAll("nav a");
+const footer = document.getElementById("footer");
+let maxSectionHeight = window.innerHeight * 4;
 
 function scrollHandler() {
-    const screenHeight = window.innerHeight
-    const scrollY = Math.round(window.scrollY)
-    const maxScreenHeight = html.scrollHeight
+  const navTags = document.querySelectorAll("nav a");
+  let currentSection;
 
-    const howMuchScroll = screenHeight + scrollY
-    const progress = (howMuchScroll / maxScreenHeight) * 100
+  sections.forEach((section) => {
+    if (html.scrollTop === section.offsetTop) {
+      currentSection = section.id;
+    }
+  });
 
-    progressEl.style.setProperty('--nav-before', `${progress}%`)
-
-    progressBarColorHandler(progress)
+  navTags.forEach((tag) => {
+    if (tag.textContent.toLocaleLowerCase() === currentSection) {
+      tag.style.fontWeight = 800;
+    } else {
+      tag.style.fontWeight = 600;
+    }
+  });
 }
 
-function progressBarColorHandler(progress) {
-    const red = Math.round(168 - (progress * (168 - 51)) / 100);
-    const green = Math.round(28 - (progress * (28 - 51)) / 100);
-    const blue = Math.round(254 - (progress * (254 - 51)) / 100);
-    const color = `rgb(${red}, ${green}, ${blue})`;
+function progressBarColorHandler() {
+  let progress = (window.scrollY / maxSectionHeight) * 100;
 
-    // progressEl.style.setProperty('--nav-before-bgc', color)
+  nav.style.background = `linear-gradient(90deg, ${progressColor(
+    progress
+  )} ${progress}%, #F1F1F1 ${progress}%)`;
+
+  console.log(progress);
+  changeFontColor(progress);
 }
 
-export {scrollHandler, progressBarColorHandler, progressEl}
+function progressColor(progress) {
+  if (progress <= 25) {
+    return "#A81CFE";
+  } else if (25 < progress && progress <= 50) {
+    return "#7825AA";
+  } else if (50 < progress && progress <= 75) {
+    return "#552C6F";
+  } else {
+    return "#333333";
+  }
+}
+
+function changeFontColor(progress) {
+  links.forEach((link) => {
+    const linkLocationPerc =
+      ((link.offsetLeft + link.offsetWidth) / window.innerWidth) * 100;
+    if (progress >= linkLocationPerc) {
+      link.style.color = "#f1f1f1";
+    } else {
+      link.style.color = "#333333";
+    }
+  });
+}
+
+window.addEventListener("scroll", scrollHandler);
+window.addEventListener("scroll", progressBarColorHandler);
+
+export { scrollHandler, progressBarColorHandler, maxSectionHeight };
