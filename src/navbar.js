@@ -3,10 +3,11 @@ const sections = document.querySelectorAll("section");
 const nav = document.querySelector("nav");
 const links = document.querySelectorAll("nav a");
 const footer = document.getElementById("footer");
-let maxSectionHeight = window.innerHeight * 4;
+const sectionHeight = window.innerHeight;
+let maxSectionHeight = sectionHeight * sections.length;
+let progress;
 
 function scrollHandler() {
-  const navTags = document.querySelectorAll("nav a");
   let currentSection;
 
   sections.forEach((section) => {
@@ -15,23 +16,26 @@ function scrollHandler() {
     }
   });
 
-  navTags.forEach((tag) => {
-    if (tag.textContent.toLocaleLowerCase() === currentSection) {
-      tag.style.fontWeight = 800;
+  links.forEach((link) => {
+    if (link.textContent.toLocaleLowerCase() === currentSection) {
+      link.style.fontWeight = 800;
     } else {
-      tag.style.fontWeight = 600;
+      link.style.fontWeight = 600;
     }
   });
 }
 
 function progressBarColorHandler() {
-  let progress = (window.scrollY / maxSectionHeight) * 100;
+  const scrolled = window.scrollY;
+
+  progress = (scrolled / maxSectionHeight) * 100;
+
+  console.log(progress);
 
   nav.style.background = `linear-gradient(90deg, ${progressColor(
     progress
   )} ${progress}%, #F1F1F1 ${progress}%)`;
 
-  console.log(progress);
   changeFontColor(progress);
 }
 

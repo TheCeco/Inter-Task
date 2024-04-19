@@ -1,7 +1,7 @@
 import { scrollHandler } from "./navbar.js";
 import { createCardsContext } from "./cards.js";
 
-// window.addEventListener("scroll", scrollHandler);
+window.addEventListener("scroll", scrollHandler);
 
 const sections = document.querySelectorAll("section");
 
